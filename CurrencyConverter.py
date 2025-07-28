@@ -7,16 +7,23 @@ def amount():
 
 
 def currency():
-    currency_name = input("Enter the currency(USD/EUR): ").lower().strip()
+    currency_name = input("Enter the currency: ").lower().strip()
     return currency_name
 
 
-def convert(amount, first_currency, second_currency):
-    if first_currency == "usd":
-        print(f"{amount} USD is equal to {amount * 0.5} EUR")
-    else:
-        print(f"{amount} EUR is equal to {amount * 2} USD")
+rates = {
+    ("usd", "eur"): 0.5,
+    ("eur", "usd"): 2
+}
 
+
+def convert(amount, from_currency, to_currency):
+    rate = rates.get((from_currency, to_currency))
+    if rate:
+        result = amount * rate
+        print(f"{amount} {from_currency.upper()} is equal to {result} {to_currency.upper()}")
+    else:
+        print("Conversion not supported.")
 
 while True:
     value = amount()
@@ -28,6 +35,7 @@ while True:
 
 
 while True:
+    print("Available currencies: ", rates)
     print("Source Currency ")
     first_currency = currency()
     print("Target Currency ")

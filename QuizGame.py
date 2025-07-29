@@ -20,6 +20,7 @@ def ask():
             "answer": correct
         })
 
+
 def start_quiz():
     print("\n--- Quiz Start ---\n")
     score = 0

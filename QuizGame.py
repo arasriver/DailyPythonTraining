@@ -40,6 +40,5 @@ def start_quiz():
 
 
 ask()
-
 start_quiz()
 

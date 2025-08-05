@@ -1,7 +1,6 @@
 import os
 
 file_name = input("Enter the file name to open or create: ").strip().lower()
-# f = open(f"{file_name}", "w")
 if os.path.exists(file_name):
     with open(f"{file_name}","r") as f:
         print(f.read())

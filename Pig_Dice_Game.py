@@ -21,12 +21,13 @@ def game(name,score):
             else:
                 continue
         else:
-            print(f"YOU WON! you exceeded 20! your score is {score}")
+            print(f"YOU WON! you exceeded max point! your score is {score}")
             return score
 
 
 while True:
-    if score_p1 < 20 and score_p2 < 20:
+    max_point = 20
+    if score_p1 < max_point and score_p2 < max_point:
         score_p1 = game("player1", score_p1)
         print(f"current score: player1: {score_p1} player2:{score_p2}")
         score_p2 = game("player2", score_p2)

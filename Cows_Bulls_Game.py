@@ -31,7 +31,7 @@ def comparison(guess, target_number, length):
 
 length = int(input("How many length should have the secret number? "))
 target_number = create_number(length)
-print(target_number)
+#print(target_number)
 print(f"I have generated a {length}-digit number with unique digits. Try to guess it!")
 
 while True:

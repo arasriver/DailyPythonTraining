@@ -1,12 +1,14 @@
 import random
 import string
 
+password_numbers = 0
 password_length = 0
 password_list = []
 while True:
     try:
         password_length = int(input("Enter password length: "))
-        if password_length > 0:
+        password_numbers = int(input("How many passwords do you need? "))
+        if password_length and password_numbers > 0:
             lowercase = ''.join(random.choices(string.ascii_lowercase, k=password_length))
             password_list.append(lowercase)
             break
@@ -56,11 +58,15 @@ while True:
 
 
 temporary_list = []
-for i in range(100):
-    for i in password_list:
-        a = ''.join(random.choices(i, k=1))
-        temporary_list.append(a)
 
+while password_numbers > 0:
+    password_numbers -= 1
+    for i in range(100):
+        for j in password_list:
+            a = ''.join(random.choices(j, k=1))
+            temporary_list.append(a)
+    final_password = ''.join(random.choices(temporary_list, k=password_length))
+    print(final_password)
+    with open("passwords.txt", "a") as f:
+        f.write(final_password + "\n")
 
-final_password = ''.join(random.choices(temporary_list, k=password_length))
-print(final_password)

@@ -72,6 +72,16 @@ def question():
             return False
 
 #######################################################
+def special_winner(list):
+    count = 0
+    for i in range(len(list)):
+        if list[i] == 6:
+            count += 1
+    if count == len(list):
+        return True
+    else:
+        return False
+#######################################################
 
 balance = start_balance()
 print(f"\ncurrent balance: {balance}")
@@ -84,6 +94,13 @@ while True:
 
     random_list = lottery()
     print(random_list)
+
+    if special_winner(random_list):
+        print("YOU WON JACKPOT, $ 1000000")
+        balance = 1000000
+        print(f"Current balance: {balance}")
+        break
+
     count_number = count(random_list)
     rest_balance = game(count_number, balance, bet_money)
     print(f"Current Balance: ${rest_balance}")

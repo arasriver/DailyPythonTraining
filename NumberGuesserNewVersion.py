@@ -42,6 +42,6 @@ while step != opportunity:
         else:
             print("too low!!", "Try a number greater than ", guessed_number)
             step += 1
-print(f"you have tried {opportunity} times. out of limitation!")
+print(f"you have tried {opportunity} times. OUT OF LIMITATION!")
 
 print(f"True number is {true_number}")

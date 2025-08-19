@@ -34,7 +34,7 @@ def start_quiz():
             print("Correct!\n")
             score += 1
         else:
-            print("Wrong.\n")
+            print("Wrong!\n")
 
     print(f"Final score: {score}/{len(quiz)}")
 

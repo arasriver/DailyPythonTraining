@@ -14,6 +14,6 @@ while dice != "n":
 
     dice = input('Roll the dice? (y/n): ').lower()
 
-print("Thanks for playing")
+print("Thanks for playing!!")
 print(f"number of dice rolling: {counter}")
 

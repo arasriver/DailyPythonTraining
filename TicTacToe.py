@@ -57,7 +57,7 @@ while True:
         x = user_input("X")
         row, col = x
         if x in control_list:
-            print("Cell is already occupied")
+            print("Cell is already occupied!")
             continue
         else:
             control_list.append(x)
@@ -68,7 +68,7 @@ while True:
         x = user_input("Y")
         row, col = x
         if x in control_list:
-            print("Cell is already occupied")
+            print("Cell is already occupied!")
             continue
         else:
             control_list.append(x)

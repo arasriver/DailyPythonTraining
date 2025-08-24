@@ -6,7 +6,7 @@ table = np.ones((3, 3), dtype=object)
 def user_input(name):
     while True:
         print(f"player {name}'s turn: ")
-        starter_row = int(input("Select a row 0,1 or 2 : "))
+        starter_row = int(input("Select a row 0, 1 or 2 : "))
         if starter_row == 0 or starter_row == 1 or starter_row == 2: 
             break
         else:

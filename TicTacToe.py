@@ -10,7 +10,7 @@ def user_input(name):
         if starter_row == 0 or starter_row == 1 or starter_row == 2: 
             break
         else:
-            print("Invalid input")
+            print("Invalid input!")
             continue
 
     while True:
@@ -18,7 +18,7 @@ def user_input(name):
         if starter_col == 0 or starter_col == 1 or starter_col == 2:
             break
         else:
-            print("Invalid input")
+            print("Invalid input!")
             continue
 
     return [starter_row, starter_col]

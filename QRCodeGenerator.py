@@ -22,7 +22,7 @@ while unique_qr > 0:
     try:
         img = qr.make_image(fill_color=color_fill, back_color=color_back)
     except ValueError:
-        print("Enter a valid color name")
+        print("Enter a valid color name!")
         continue
 
     file_name = input("Enter the file name: ")
